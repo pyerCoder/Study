@@ -3,28 +3,50 @@ imooc
 @carlosfu
 
 section01
-    盛赞Redis
-        高性能Key-Value服务器
-            号称qps可以到10万级别
-        多种数据结构
-            字符串，hash，列表，有序集合，集合等
-        丰富的功能
-            pipeline，慢查询，发布订阅，geo，位图
-        高可用分布支持
-            redis cluster，Sentinel...
-    Redis课程目录01
-        Redis初识
-        API的理解和使用
-        Redis客户端的使用
-        瑞士军刀Redis
-    Redis课程目录02
-        Redis持久化的取舍和选择
-        Redis复制的原理和优化
-        Redis Sentinel
-        Redis Cluster
-    适合人群
-        Redis初学者
-        Redis进阶者
-        希望了解Redis企业级开发运维技巧
-
-
+    01-01
+        盛赞Redis
+            高性能Key-Value服务器
+                号称qps可以到10万级别
+            多种数据结构
+                字符串，hash，列表，有序集合，集合等
+            丰富的功能
+                pipeline，慢查询，发布订阅，geo，位图
+            高可用分布支持
+                redis cluster，Sentinel...
+        Redis课程目录01
+            Redis初识
+            API的理解和使用
+            Redis客户端的使用
+            瑞士军刀Redis
+        Redis课程目录02
+            Redis持久化的取舍和选择
+            Redis复制的原理和优化
+            Redis Sentinel
+            Redis Cluster
+        适合人群
+            Redis初学者
+            Redis进阶者
+            希望了解Redis企业级开发运维技巧
+        技术储备
+            了解Linux命令的基本使用
+            了解常用数据结构
+            了解一门编程语言
+        授课思路
+            开发运维结合
+            原理接入
+            实战案例分析
+        课程目标
+            全面了解Redis单机的相关功能
+            全面了解Redis高可用和分布式方案
+            理解企业级Redis的开发运维
+    01-02
+        课程目录
+            Redis初识
+                Redis是什么
+                    开源
+                    基于键值的存储服务系统
+                    多种数据结构
+                    高性能，功能丰富
+                Redis的特性回顾
+                Redis单机安装
+                Redis典型使用场景

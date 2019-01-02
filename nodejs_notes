@@ -47,3 +47,15 @@ Web开发所需要了解的NodeJS
         疑问点
             为什么没有 Express、Koa
             打好基础、高屋建瓴，先打好基础，再学习框架
+
+课程大纲
+    NodeJS介绍
+    调试 & 项目初始化
+    基础API
+    简单Web Server
+    单元测试 & 发布
+    NodeJS爬虫示例
+
+02
+NodeJS是什么
+    Node.js is a JavaScript runtime built on Chrome's V8

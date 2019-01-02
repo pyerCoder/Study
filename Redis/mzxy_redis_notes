@@ -1,0 +1,79 @@
+麥子學院
+    深入淺出Redis:king
+    Redis的發展史
+        Redis[Remote Directory Server]:遠程服務器字典
+    如何下載安裝Redis
+        redis.io/download下載安裝
+        參考文檔，不同的操作系統，對比操作即可
+        1、Linux下安裝Redis
+            http://redis.io/download
+
+            wget http://download.redis.io/releases/redis-3.0.1.tar.gz下載
+            tar -xzvf redis-3.0.1.tar.gz 解壓
+            cd redis-3.0.1 進入解壓目錄
+            make 編譯 安裝
+            make install
+        2、在bin下可執行的程序
+            redis-server:Redis服務端
+            redis-cli:命令行客戶端
+            redis-benchmark:Redis的性能測試工具
+            redis-check-aof:AOF文件修復工具
+            redis-chek-dump:RDB文件檢測工具
+
+            redis.conf:redis配置文件
+            將配置文件中daemonize yes 以守護進程的方式來使用
+        3、啟動和停止Redis
+            直接啟動
+                redis-server
+                redis-server /etc/redis.conf
+            停止Redis
+                shutdown
+                結束Redis的進程也可以
+    命令返回值
+        1、狀態回覆
+            ping
+            SET test 'this is a test!'       # 指令不區分大小寫(建議系統指令大寫，系統變量小寫)
+        2、錯誤回覆
+            錯誤回覆以error開始
+            (error) ERR unknown command 'TESTERROR'
+        3、整數回覆
+            dbsize
+            (integer) 2
+        4、字符串回覆
+            get test
+            'this is a test'
+            (nil)代表空值結果
+        5、多行字符串回覆
+            keys *    # 得到當前數據庫中的存在的鍵名
+            1) 'test1'
+            2) 'test2'
+
+    Redis配置選項相關內容
+        1、動態設置/獲取配置選項的值
+            CONFIG GET name
+            1)"port"
+            2)"6379"
+        2、設置
+            CONFIG SET loglevel warning
+            CONFIG GET loglevel
+        3、在啟動指令行配置選項，這樣會直接覆蓋配置文件中對應的配置選項，指令行配置選項優先級高於配置文件配置
+            redis-server redis.conf --loglevel warning
+
+        4、Redis配置文件redis.conf選項相關
+            port 6379    # 默認端口
+            bind 127.0.0.1 # 默認綁定的主機地址
+            timeout 0 # 當客戶端限制多久之後關閉連結，0代表沒有啟動該選項
+            loglevel notice #  日誌的錯誤級別
+            logfile "" # 日誌的紀錄方式，默認為標準輸出
+            database 16 # 默認數據庫的數量為16個，默認數據庫編號從0開始
+            ---快照相關---
+            save <seconds> <changes> # 多少秒有多少次改變將其同步到瓷盤中數據文件裡
+            save 900 1
+            save 300 10
+            save 60 10000
+
+            rdbcompression yes # 存儲本地數據庫時是否啟用壓縮，默認yes
+            dbfilename dump.rdb # 指定本地數據庫文件名，默認為dump.rdb
+            dir ./, 指定本地數據庫的存放目錄，默認是當前目錄
+
+
